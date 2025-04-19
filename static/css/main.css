@@ -521,14 +521,15 @@ p {
     height: 350px;
     perspective: 1000px;
     z-index: 1;
-    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
     cursor: pointer;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
 .benefit-card:hover {
     transform: translateY(-15px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 25px rgba(255, 78, 46, 0.1);
+    background: linear-gradient(135deg, var(--accent-orange) 0%, var(--accent-orange-dark) 100%);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 25px rgba(255, 78, 46, 0.2);
 }
 
 .benefit-card::before {
@@ -597,6 +598,7 @@ p {
 
 .benefit-card:hover .benefit-title {
     transform: scale(1.05);
+    color: var(--white);
 }
 
 .benefit-content {
@@ -613,6 +615,7 @@ p {
 .benefit-card:hover .benefit-content {
     opacity: 1;
     transform: translateZ(30px);
+    color: var(--white);
 }
 
 .section-title {
@@ -819,11 +822,12 @@ p {
 
 .step-number {
     position: absolute;
-    top: -25px;
+    top: -20px;
     left: 50%;
     transform: translateX(-50%);
     width: 50px;
     height: 50px;
+    margin-top: -5px;
     background: linear-gradient(135deg, var(--accent-orange) 0%, var(--accent-orange-dark) 100%);
     color: var(--white);
     font-weight: 700;
@@ -874,7 +878,7 @@ p {
 }
 
 .steps-row {
-    margin-top: var(--space-xl);
+    margin-top: calc(var(--space-xl) + 30px);
     position: relative;
     z-index: 1;
 }
