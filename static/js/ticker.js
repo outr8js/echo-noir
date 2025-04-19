@@ -19,36 +19,41 @@ function initTicker() {
     
     // Only initialize animations if the user doesn't prefer reduced motion
     if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        // Set up GSAP animation
-        gsap.to('.ticker-content', {
-            x: -contentWidth,
-            repeat: -1,
-            duration: duration,
-            ease: 'linear'
-        });
+        // Set up GSAP animation if GSAP is available
+        if (typeof gsap !== 'undefined') {
+            gsap.to('.ticker-content', {
+                x: -contentWidth,
+                repeat: -1,
+                duration: duration,
+                ease: 'linear'
+            });
+            
+            // Pause on hover
+            tickerWrapper.addEventListener('mouseenter', function() {
+                gsap.to('.ticker-content', { duration: 0.3, ease: 'power1.out', opacity: 0.8 });
+            });
+            
+            tickerWrapper.addEventListener('mouseleave', function() {
+                gsap.to('.ticker-content', { duration: 0.3, ease: 'power1.out', opacity: 1 });
+            });
+            
+            // Adjust animation on window resize
+            window.addEventListener('resize', function() {
+                const newContentWidth = tickerContent.offsetWidth;
+                const newDuration = newContentWidth / 50;
+                
+                gsap.killTweensOf('.ticker-content');
+                gsap.set('.ticker-content', { x: 0 });
+                gsap.to('.ticker-content', {
+                    x: -newContentWidth,
+                    repeat: -1,
+                    duration: newDuration,
+                    ease: 'linear'
+                });
+            });
+        } else {
+            // Fallback to CSS animation if GSAP is not available
+            tickerContent.style.animationDuration = duration + 's';
+        }
     }
-    
-    // Pause on hover
-    tickerWrapper.addEventListener('mouseenter', function() {
-        gsap.to('.ticker-content', { timeScale: 0.2 });
-    });
-    
-    tickerWrapper.addEventListener('mouseleave', function() {
-        gsap.to('.ticker-content', { timeScale: 1 });
-    });
-    
-    // Adjust animation on window resize
-    window.addEventListener('resize', function() {
-        const newContentWidth = tickerContent.offsetWidth;
-        const newDuration = newContentWidth / 50;
-        
-        gsap.killTweensOf('.ticker-content');
-        gsap.set('.ticker-content', { x: 0 });
-        gsap.to('.ticker-content', {
-            x: -newContentWidth,
-            repeat: -1,
-            duration: newDuration,
-            ease: 'linear'
-        });
-    });
 }
