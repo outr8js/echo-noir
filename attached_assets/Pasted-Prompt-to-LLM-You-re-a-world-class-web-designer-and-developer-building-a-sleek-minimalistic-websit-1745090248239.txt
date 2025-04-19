@@ -1,0 +1,125 @@
+Prompt to LLM:
+You’re a world-class web designer and developer building a sleek, minimalistic website for Echo Noir, an AI-powered answering service for small businesses. The style is similar to Apple.com—clean typography, rich 4-8k imagery, subtle animations, and intuitive interactivity. The primary font for the brand name is “LoosExtended Medium” for “Echo” and “LoosExtended Light” for “Noir.” The color palette is predominantly dark (near-black background) with vibrant orange (#FF4E2E) accent colors. Include subtle geometric orange shapes as decorative elements for visual contrast. Parallax scrolling animations and interactive card-flip elements are key engagement features.
+
+⸻
+
+PAGE BY PAGE DESIGN AND FUNCTION PLAN
+
+⸻
+
+1. Homepage (/)
+
+Hero Section:
+	•	Background: Near-black (#0B0B0B)
+	•	Main headline: “Never miss another customer call.” (white, LoosExtended Medium)
+	•	Subheadline: “Echo Noir answers calls instantly, books appointments, and frees your time.” (soft gray, sans-serif font)
+	•	CTA: “Try Free for 14 Days” button, orange (#FF4E2E), smooth glow effect on hover
+	•	Hero imagery: Ultra-high-resolution abstract 3D sculpture or wave-form (black/gold/orange accents, similar style to provided reference)
+
+Pain-Points Section (Interactive Cards):
+	•	Three cards horizontally aligned
+	•	Initial state: pain points clearly stated, minimal icon
+	•	On hover: card background smoothly transitions to accent orange color, white text/icons
+	•	On click: Card flips vertically revealing detailed benefit explanation
+	•	Card 1 (front): “Missed Calls Cost You Jobs”
+	•	(Back): “92% of callers move on to competitors if not answered promptly. Echo Noir ensures every call is captured.”
+	•	Card 2 (front): “Interruptions Kill Productivity”
+	•	(Back): “Echo Noir handles customer calls, freeing you up for high-value tasks.”
+	•	Card 3 (front): “Staffing is Expensive”
+	•	(Back): “Get premium receptionist service 24/7 at less than 10% the cost of hiring.”
+
+Social Proof Ticker:
+	•	Continuous scrolling ticker in vibrant orange stating: “98% answer rate • 50,000+ calls handled • Trusted by leading small businesses nationwide.”
+
+“How Echo Noir Works” Section:
+	•	Three-step visual guide, horizontally displayed (responsive stack on mobile)
+	1.	Customer Calls (Icon of phone wave animation)
+	2.	Echo Noir Answers Professionally (Animated wave-form logo provided by user)
+	3.	You Get Instant Summaries (Icon/message bubble animation)
+
+CTA Footer:
+	•	Headline: “Ready to Stop Missing Calls?”
+	•	Button: “Start Your Free Trial,” orange with smooth hover animation
+
+⸻
+
+2. Features Page (/features)
+
+Hero:
+	•	Animated waveform logo (user-provided reference), gently pulsing with scrolling
+	•	Bold header: “Smart Features That Grow Your Business”
+
+Interactive Feature Cards (same hover/flip interaction as homepage):
+	•	Card examples:
+	1.	“24/7 AI Receptionist” / “Always available, professional, and accurate.”
+	2.	“Real-time Call Summaries” / “Stay informed instantly after each call.”
+	3.	“Affordable Pricing” / “All the advantages of a receptionist, at a fraction of the cost.”
+	4.	“Customizable Responses” / “Echo Noir learns your business to answer authentically.”
+
+Animated Orange Geometric Shapes:
+	•	Floating gently in background margins to maintain brand consistency and visual interest
+
+⸻
+
+3. Pricing Page (/pricing)
+
+Clear Pricing Cards:
+	•	Two clearly labeled plans side-by-side with elegant hover effect that subtly raises and highlights the card
+	•	Plan 1: “Essential” – $99/mo (basic answering & summaries)
+	•	Plan 2: “Professional” – $149/mo (advanced scheduling, customization)
+	•	Each card CTA: “Get Started,” with distinct interactive hover effect (button brightens, slight scale up)
+
+Interactive FAQ:
+	•	Accordion style interaction, smoothly expands to reveal concise answers to common questions, subtle fade-in animation
+
+⸻
+
+4. About Page (/about)
+
+Mission and Vision Section:
+	•	Minimalistic text layout, animated on scroll (fade-in from bottom)
+	•	Brief, powerful founder’s quote: “Every small business deserves premium customer service.”
+
+Founder or Brand Story Image:
+	•	High-resolution, professional duotone image (black & orange), parallax scrolling effect to add depth
+
+⸻
+
+5. Contact Page (/contact)
+	•	Simple contact form (name, email, message), minimalist, floating-label style fields
+	•	Subtle animation on field focus
+	•	Orange-accented submit button with interactive hover/glow animation
+
+⸻
+
+6. Custom 404 Page
+	•	Minimalist centered waveform logo animation
+	•	Text: “Oops, that’s a missed call. Let’s get you back home.”
+	•	Button: “Return Home,” orange-accented, animated gently
+
+⸻
+
+GLOBAL DESIGN & FUNCTIONAL ELEMENTS (required across all pages)
+
+Navigation Bar:
+	•	Sticky top navigation (Home, Features, Pricing, About, Contact)
+	•	Animated underline hover effect, smooth scroll behavior
+
+Footer:
+	•	Brand Logo (waveform animation on hover), minimal links (Privacy Policy, Terms of Use, Social Icons)
+	•	Social icons animate subtly on hover (brighten in accent orange)
+
+Animations & Interactions:
+	•	Use GSAP library or CSS keyframes for seamless, subtle scroll-based animations (parallax for images and text, cards flip animations, ticker)
+	•	Ensure all animations are subtle and enhance user experience without being overwhelming
+	•	Responsive and optimized for all screen sizes (mobile-first)
+
+Performance & Accessibility:
+	•	Images optimized for speed (WebP format), lazy-loading enabled
+	•	Accessibility best practices (ARIA labels, WCAG AA contrast standards, reduce-motion preferences honored)
+
+⸻
+
+End of Prompt
+
+This high-level prompt ensures your LLM (GPT-4o, Framer AI, Locofy, etc.) produces a sleek, interactive, and visually stunning website aligned exactly to your Echo Noir brand vision.
