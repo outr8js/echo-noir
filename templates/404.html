@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block title %}Echo Noir - Page Not Found{% endblock %}
+
+{% block content %}
+<!-- 404 Section -->
+<section class="error-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <div class="waveform-animation">
+                    <img src="{{ url_for('static', filename='svg/logo.svg') }}" alt="Echo Noir Waveform" class="error-logo">
+                </div>
+                <h1>404</h1>
+                <h2>Oops, that's a missed call.</h2>
+                <p>Let's get you back home.</p>
+                <a href="{{ url_for('index') }}" class="btn btn-primary cta-btn">Return Home</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

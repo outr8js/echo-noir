@@ -1,0 +1,201 @@
+{% extends 'layout.html' %}
+
+{% block title %}Echo Noir - Features{% endblock %}
+
+{% block extra_head %}
+<script src="{{ url_for('static', filename='js/cards.js') }}" defer></script>
+{% endblock %}
+
+{% block content %}
+<!-- Features Hero Section -->
+<section class="page-hero features-hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="waveform-animation">
+                    <img src="{{ url_for('static', filename='svg/logo.svg') }}" alt="Echo Noir Waveform" class="page-hero-logo">
+                </div>
+                <h1>Smart Features That Grow Your Business</h1>
+                <p class="lead">Discover how Echo Noir transforms your customer communication</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Grid Section -->
+<section class="features-grid-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-3">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <h3>24/7 AI Receptionist</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Always available, professional, and accurate no matter when your customers call.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">
+                                <i class="fas fa-clipboard-list"></i>
+                            </div>
+                            <h3>Real-time Call Summaries</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Stay informed instantly after each call with detailed notes and action items.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">
+                                <i class="fas fa-tags"></i>
+                            </div>
+                            <h3>Affordable Pricing</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>All the advantages of a receptionist, at a fraction of the cost with transparent pricing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">
+                                <i class="fas fa-sliders-h"></i>
+                            </div>
+                            <h3>Customizable Responses</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Echo Noir learns your business to answer authentically and represent your brand perfectly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <h3>Smart Appointment Booking</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Automatically schedule appointments based on your availability, reducing scheduling conflicts.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <h3>Multi-language Support</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Communicate with your customers in their preferred language for better service.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3>Analytics Dashboard</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Gain insights into call patterns, customer needs, and business opportunities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h3>Mobile Notifications</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Get instant alerts about important calls or action items directly on your phone.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Feature Highlight Section -->
+<section class="feature-highlight-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2>Built for Small Businesses</h2>
+                <p class="lead">Our AI receptionist understands the unique challenges faced by small businesses.</p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check"></i> No staffing overhead costs</li>
+                    <li><i class="fas fa-check"></i> Zero training required</li>
+                    <li><i class="fas fa-check"></i> 24/7 availability without overtime</li>
+                    <li><i class="fas fa-check"></i> Scales with your business growth</li>
+                    <li><i class="fas fa-check"></i> Creates consistent customer experiences</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="highlight-image">
+                    <div class="geometric-shapes">
+                        <div class="shape shape-1"></div>
+                        <div class="shape shape-2"></div>
+                        <div class="shape shape-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Experience Echo Noir's Features Firsthand</h2>
+            <a href="{{ url_for('contact') }}" class="btn btn-primary cta-btn">Start Your Free Trial</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        initFlipCards();
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,160 @@
+{% extends 'layout.html' %}
+
+{% block title %}Echo Noir - Never Miss Another Customer Call{% endblock %}
+
+{% block extra_head %}
+<script src="{{ url_for('static', filename='js/ticker.js') }}" defer></script>
+<script src="{{ url_for('static', filename='js/cards.js') }}" defer></script>
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 hero-content">
+                <h1 class="hero-title">Never miss another customer call.</h1>
+                <p class="hero-subtitle">Echo Noir answers calls instantly, books appointments, and frees your time.</p>
+                <a href="{{ url_for('contact') }}" class="btn btn-primary cta-btn">Try Free for 14 Days</a>
+            </div>
+            <div class="col-lg-6 hero-image">
+                <div class="waveform-animation">
+                    <img src="{{ url_for('static', filename='svg/logo.svg') }}" alt="Echo Noir Waveform" class="hero-logo">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Social Proof Ticker -->
+<section class="social-proof-ticker">
+    <div class="ticker-wrapper">
+        <div class="ticker-content">
+            <span>98% answer rate</span>
+            <span class="ticker-separator">•</span>
+            <span>50,000+ calls handled</span>
+            <span class="ticker-separator">•</span>
+            <span>Trusted by leading small businesses nationwide</span>
+            <span class="ticker-separator">•</span>
+            <span>98% answer rate</span>
+            <span class="ticker-separator">•</span>
+            <span>50,000+ calls handled</span>
+            <span class="ticker-separator">•</span>
+            <span>Trusted by leading small businesses nationwide</span>
+        </div>
+    </div>
+</section>
+
+<!-- Pain Points Section -->
+<section class="pain-points-section">
+    <div class="container">
+        <h2 class="section-title text-center">Pain Points We Solve</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">
+                                <i class="fas fa-phone-slash"></i>
+                            </div>
+                            <h3>Missed Calls Cost You Jobs</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>92% of callers move on to competitors if not answered promptly. Echo Noir ensures every call is captured.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">
+                                <i class="fas fa-stopwatch"></i>
+                            </div>
+                            <h3>Interruptions Kill Productivity</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Echo Noir handles customer calls, freeing you up for high-value tasks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <h3>Staffing is Expensive</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Get premium receptionist service 24/7 at less than 10% the cost of hiring.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="how-it-works-section">
+    <div class="container">
+        <h2 class="section-title text-center">How Echo Noir Works</h2>
+        <div class="row steps-row">
+            <div class="col-md-4">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <img src="{{ url_for('static', filename='svg/phone-icon.svg') }}" alt="Customer Calls">
+                    </div>
+                    <h3>Customer Calls</h3>
+                    <p>Your customer calls your business line as usual.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <img src="{{ url_for('static', filename='svg/wave-icon.svg') }}" alt="Echo Noir Answers">
+                    </div>
+                    <h3>Echo Noir Answers Professionally</h3>
+                    <p>Our AI receptionist answers promptly and professionally.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <img src="{{ url_for('static', filename='svg/message-icon.svg') }}" alt="Get Summaries">
+                    </div>
+                    <h3>You Get Instant Summaries</h3>
+                    <p>Receive detailed call summaries instantly after each call.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Ready to Stop Missing Calls?</h2>
+            <a href="{{ url_for('contact') }}" class="btn btn-primary cta-btn">Start Your Free Trial</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+    // Initialize the ticker animation
+    document.addEventListener('DOMContentLoaded', function() {
+        initTicker();
+        initFlipCards();
+    });
+</script>
+{% endblock %}

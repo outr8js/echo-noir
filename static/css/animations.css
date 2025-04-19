@@ -1,0 +1,194 @@
+/*
+* Echo Noir - Animations Stylesheet
+* Contains custom animations and transitions
+*/
+
+/* Fade In Animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Fade In Up Animation */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Logo Pulse Animation */
+.hero-logo, .page-hero-logo, .about-logo, .error-logo {
+    animation: logoPulse 4s ease-in-out infinite;
+}
+
+@keyframes logoPulse {
+    0% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+}
+
+/* Button Hover Animation */
+.cta-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+    z-index: -1;
+}
+
+.cta-btn:hover::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Card Hover Animation */
+.value-card, .step-card, .contact-info-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover, .step-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Geometric Shapes Animation */
+.geometric-shapes .shape {
+    transition: all 0.5s ease;
+}
+
+.highlight-image:hover .shape-1 {
+    transform: translate(-10px, -10px) rotate(5deg);
+}
+
+.highlight-image:hover .shape-2 {
+    transform: translate(10px, 10px) rotate(-5deg);
+}
+
+.highlight-image:hover .shape-3 {
+    transform: translate(5px, -5px) rotate(10deg);
+}
+
+/* Navigation Link Hover Effect */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent-orange);
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover::before {
+    visibility: visible;
+    width: 100%;
+}
+
+/* Staggered Animation for Features Grid */
+.features-grid-section .flip-card {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.features-grid-section .flip-card.animated {
+    animation: fadeInStaggered 0.6s forwards;
+}
+
+@keyframes fadeInStaggered {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scrolling Animation for the Ticker */
+@keyframes scrollTicker {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.ticker-content {
+    animation: scrollTicker 30s linear infinite;
+}
+
+/* Accordion Animation */
+.accordion-button {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Form Field Focus Animation */
+.form-control, .form-select {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Flash Message Animation */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.flash-message.fade-out {
+    animation: fadeOut 0.5s forwards;
+}

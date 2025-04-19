@@ -1,0 +1,156 @@
+{% extends 'layout.html' %}
+
+{% block title %}Echo Noir - Pricing{% endblock %}
+
+{% block content %}
+<!-- Pricing Hero Section -->
+<section class="page-hero pricing-hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>Simple, Transparent Pricing</h1>
+                <p class="lead">Choose the plan that's right for your business</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Plans Section -->
+<section class="pricing-plans-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5">
+                <div class="pricing-card">
+                    <div class="pricing-card-header">
+                        <h3>Essential</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">99</span>
+                            <span class="period">/mo</span>
+                        </div>
+                    </div>
+                    <div class="pricing-card-body">
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 24/7 AI call answering</li>
+                            <li><i class="fas fa-check"></i> Call summaries</li>
+                            <li><i class="fas fa-check"></i> Basic appointment scheduling</li>
+                            <li><i class="fas fa-check"></i> Email notifications</li>
+                            <li><i class="fas fa-check"></i> Up to 150 calls/month</li>
+                            <li><i class="fas fa-check"></i> Basic customization</li>
+                        </ul>
+                        <a href="{{ url_for('contact') }}" class="btn btn-outline-primary pricing-btn">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="pricing-card featured">
+                    <div class="pricing-card-badge">Popular</div>
+                    <div class="pricing-card-header">
+                        <h3>Professional</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">149</span>
+                            <span class="period">/mo</span>
+                        </div>
+                    </div>
+                    <div class="pricing-card-body">
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Essential features</li>
+                            <li><i class="fas fa-check"></i> Advanced appointment scheduling</li>
+                            <li><i class="fas fa-check"></i> SMS notifications</li>
+                            <li><i class="fas fa-check"></i> Up to 300 calls/month</li>
+                            <li><i class="fas fa-check"></i> Advanced customization</li>
+                            <li><i class="fas fa-check"></i> CRM integration</li>
+                            <li><i class="fas fa-check"></i> Priority support</li>
+                        </ul>
+                        <a href="{{ url_for('contact') }}" class="btn btn-primary pricing-btn">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="container">
+        <h2 class="section-title text-center">Frequently Asked Questions</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                How does Echo Noir answer my calls?
+                            </button>
+                        </h3>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Echo Noir uses advanced AI technology to answer calls in a natural, conversational manner. It can answer questions, collect information, and book appointments just like a human receptionist, but is available 24/7 without breaks.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                What happens if I exceed my monthly call limit?
+                            </button>
+                        </h3>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                If you exceed your monthly call limit, additional calls are billed at a rate of $0.75 per call. You'll receive notifications when you're approaching your limit, and we offer flexible options to upgrade your plan mid-cycle if needed.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Can Echo Noir integrate with my existing software?
+                            </button>
+                        </h3>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, Echo Noir integrates with popular CRM systems, calendar applications, and business software. Our Professional plan includes standard integrations with Salesforce, Google Calendar, Microsoft Outlook, and more. Custom integrations are available upon request.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                How long is the free trial?
+                            </button>
+                        </h3>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Our free trial lasts for 14 days with full access to all features in the Professional plan. There's no credit card required to start your trial, and you can cancel anytime.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                Is there a setup fee or long-term contract?
+                            </button>
+                        </h3>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                No, there are no setup fees or long-term contracts required. Echo Noir operates on a month-to-month subscription basis, giving you the flexibility to adjust or cancel your service as your business needs change.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Ready to Transform Your Business Communications?</h2>
+            <a href="{{ url_for('contact') }}" class="btn btn-primary cta-btn">Start Your Free Trial</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

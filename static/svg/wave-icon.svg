@@ -1,0 +1,23 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background (transparent) -->
+  <rect width="100" height="100" fill="none"/>
+  
+  <!-- Center waveform line -->
+  <line x1="50" y1="20" x2="50" y2="80" stroke="#FF4E2E" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Left waveform lines -->
+  <line x1="40" y1="30" x2="40" y2="70" stroke="#FF4E2E" stroke-width="2" stroke-linecap="round"/>
+  <line x1="30" y1="35" x2="30" y2="65" stroke="#FF4E2E" stroke-width="2" stroke-linecap="round"/>
+  <line x1="20" y1="40" x2="20" y2="60" stroke="#FF4E2E" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Right waveform lines -->
+  <line x1="60" y1="30" x2="60" y2="70" stroke="#FF4E2E" stroke-width="2" stroke-linecap="round"/>
+  <line x1="70" y1="35" x2="70" y2="65" stroke="#FF4E2E" stroke-width="2" stroke-linecap="round"/>
+  <line x1="80" y1="40" x2="80" y2="60" stroke="#FF4E2E" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Animated pulse effect -->
+  <circle cx="50" cy="50" r="40" fill="none" stroke="#FF4E2E" stroke-width="1" opacity="0.3">
+    <animate attributeName="r" values="30;40;30" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.1;0.3;0.1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+</svg>
