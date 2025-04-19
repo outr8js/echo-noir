@@ -408,6 +408,28 @@ p {
 }
 
 /* Social Proof Ticker */
+.additional-benefits-title {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    margin-bottom: 1.5rem;
+    color: var(--white);
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    position: relative;
+    display: inline-block;
+}
+
+.additional-benefits-title::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-orange) 0%, var(--accent-orange-light) 100%);
+    border-radius: 2px;
+}
+
 .social-proof-ticker {
     background: linear-gradient(90deg, var(--accent-orange-dark) 0%, var(--accent-orange) 50%, var(--accent-orange-dark) 100%);
     padding: var(--space-md) 0;
@@ -478,7 +500,7 @@ p {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
     }
 }
 

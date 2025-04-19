@@ -9,9 +9,8 @@ function initTicker() {
     
     if (!tickerWrapper || !tickerContent) return;
     
-    // Clone the ticker content to create a seamless loop
-    const clone = tickerContent.cloneNode(true);
-    tickerWrapper.appendChild(clone);
+    // Create a duplicate of the content for seamless looping
+    // We'll animate it with CSS/GSAP without adding it to the DOM
     
     // Calculate the animation duration based on content width
     const contentWidth = tickerContent.offsetWidth;
@@ -23,7 +22,8 @@ function initTicker() {
         if (typeof gsap !== 'undefined') {
             gsap.to('.ticker-content', {
                 x: -contentWidth,
-                repeat: -1,
+                repeat: -1, 
+                repeatDelay: 0.5,
                 duration: duration,
                 ease: 'linear'
             });
@@ -47,6 +47,7 @@ function initTicker() {
                 gsap.to('.ticker-content', {
                     x: -newContentWidth,
                     repeat: -1,
+                    repeatDelay: 0.5,
                     duration: newDuration,
                     ease: 'linear'
                 });
