@@ -9,6 +9,9 @@ logging.basicConfig(level=logging.DEBUG)
 app = Flask(__name__)
 app.secret_key = os.environ.get("SESSION_SECRET", "echo-noir-default-secret")
 
+# Force template reloading (disable template caching)
+app.config['TEMPLATES_AUTO_RELOAD'] = True
+
 # Route for home page
 @app.route('/')
 def index():

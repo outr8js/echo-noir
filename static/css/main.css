@@ -326,37 +326,37 @@ p {
 }
 
 .hero-title {
-    font-size: 4.5rem;
+    font-size: 7rem;
     margin-bottom: var(--space-lg);
     line-height: 1.2;
     background: linear-gradient(90deg, var(--white) 0%, var(--soft-gray) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 4px 30px rgba(0,0,0,0.2);
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     text-align: left;
 }
 
 .echo-text {
     font-weight: 500;
     font-family: 'Inter', sans-serif;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 }
 
 .noir-text {
     font-weight: 300;
     font-family: 'Inter', sans-serif;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 }
 
 .hero-subtitle {
-    font-size: 1.65rem;
+    font-size: 2.2rem;
     color: var(--soft-gray);
     margin-bottom: var(--space-xl);
     line-height: 1.5;
     font-weight: 400;
-    max-width: 90%;
-    letter-spacing: 0.5px;
+    max-width: 95%;
+    letter-spacing: 1px;
     text-align: left;
     position: relative;
     padding-bottom: var(--space-md);
