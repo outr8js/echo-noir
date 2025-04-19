@@ -326,37 +326,39 @@ p {
 }
 
 .hero-title {
-    font-size: 7rem;
+    font-size: clamp(3.5rem, 10vw, 10rem);
     margin-bottom: var(--space-lg);
-    line-height: 1.2;
+    line-height: 1;
     background: linear-gradient(90deg, var(--white) 0%, var(--soft-gray) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 4px 30px rgba(0,0,0,0.2);
-    letter-spacing: 2px;
+    letter-spacing: -0.5px;
     text-align: left;
+    font-weight: 700;
 }
 
 .echo-text {
     font-weight: 500;
     font-family: 'Inter', sans-serif;
-    letter-spacing: 3px;
+    letter-spacing: 0.5px;
+    margin-right: 0.15em;
 }
 
 .noir-text {
     font-weight: 300;
     font-family: 'Inter', sans-serif;
-    letter-spacing: 3px;
+    letter-spacing: 0.5px;
 }
 
 .hero-subtitle {
-    font-size: 2.2rem;
+    font-size: clamp(1.5rem, 5vw, 2.8rem);
     color: var(--soft-gray);
     margin-bottom: var(--space-xl);
-    line-height: 1.5;
+    line-height: 1.3;
     font-weight: 400;
-    max-width: 95%;
-    letter-spacing: 1px;
+    max-width: 100%;
+    letter-spacing: -0.3px;
     text-align: left;
     position: relative;
     padding-bottom: var(--space-md);
@@ -476,10 +478,12 @@ p {
 }
 
 .section-title {
-    font-size: 2.8rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
     margin-bottom: var(--space-xl);
     position: relative;
     padding-bottom: var(--space-md);
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 .section-title::after {
@@ -641,7 +645,7 @@ p {
 .step-card {
     background: linear-gradient(145deg, var(--medium-gray) 0%, rgba(26, 26, 26, 0.9) 100%);
     border-radius: var(--radius-lg);
-    padding: var(--space-xl);
+    padding: var(--space-lg) var(--space-md);
     text-align: center;
     position: relative;
     height: 100%;
@@ -650,6 +654,9 @@ p {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     z-index: 1;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .step-card::before {
@@ -692,8 +699,8 @@ p {
 }
 
 .step-icon {
-    margin: var(--space-xl) 0 var(--space-lg);
-    height: 80px;
+    margin: var(--space-lg) 0 var(--space-md);
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -711,16 +718,21 @@ p {
 }
 
 .step-card h3 {
-    margin-bottom: var(--space-md);
-    font-size: 1.75rem;
+    margin-bottom: var(--space-sm);
+    font-size: clamp(1.2rem, 2.5vw, 1.75rem);
     color: var(--white);
     font-weight: 600;
+    word-spacing: normal;
+    letter-spacing: -0.5px;
 }
 
 .step-card p {
     color: var(--soft-gray);
-    font-size: 1.1rem;
-    line-height: 1.6;
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    line-height: 1.5;
+    margin-bottom: 0;
+    letter-spacing: -0.2px;
+    word-spacing: normal;
 }
 
 .steps-row {
