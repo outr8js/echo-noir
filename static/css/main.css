@@ -326,24 +326,50 @@ p {
 }
 
 .hero-title {
-    font-size: 4rem;
-    font-weight: 700;
+    font-size: 4.5rem;
     margin-bottom: var(--space-lg);
     line-height: 1.2;
-    letter-spacing: -0.5px;
     background: linear-gradient(90deg, var(--white) 0%, var(--soft-gray) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 4px 30px rgba(0,0,0,0.2);
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.echo-text {
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 2px;
+}
+
+.noir-text {
+    font-weight: 300;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 2px;
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.65rem;
     color: var(--soft-gray);
     margin-bottom: var(--space-xl);
-    line-height: 1.6;
+    line-height: 1.5;
     font-weight: 400;
     max-width: 90%;
+    letter-spacing: 0.5px;
+    text-align: left;
+    position: relative;
+    padding-bottom: var(--space-md);
+}
+
+.hero-subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-orange) 0%, transparent 100%);
 }
 
 .hero-image, .page-hero-logo {

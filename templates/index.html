@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 
-{% block title %}Echo Noir - Never Miss Another Customer Call{% endblock %}
+{% block title %}Echo Noir - The Echo That Answers, So You Don't Have To{% endblock %}
 
 {% block extra_head %}
 <script src="{{ url_for('static', filename='js/ticker.js') }}" defer></script>
@@ -13,8 +13,8 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 hero-content">
-                <h1 class="hero-title">Never miss another customer call.</h1>
-                <p class="hero-subtitle">Echo Noir answers calls instantly, books appointments, and frees your time.</p>
+                <h1 class="hero-title"><span class="echo-text">Echo</span> <span class="noir-text">Noir</span></h1>
+                <p class="hero-subtitle">The Echo That Answers, So You Don't Have To.</p>
                 <a href="{{ url_for('contact') }}" class="btn btn-primary cta-btn">Try Free for 14 Days</a>
             </div>
             <div class="col-lg-6 hero-image">
