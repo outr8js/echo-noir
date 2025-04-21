@@ -14,7 +14,7 @@ function initTicker() {
     
     // Calculate the animation duration based on content width
     const contentWidth = tickerContent.offsetWidth;
-    const duration = contentWidth / 30; // slower speed for longer text
+    const duration = contentWidth / 60; // slower speed for longer text
     
     // Only initialize animations if the user doesn't prefer reduced motion
     if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -40,14 +40,14 @@ function initTicker() {
             // Adjust animation on window resize
             window.addEventListener('resize', function() {
                 const newContentWidth = tickerContent.offsetWidth;
-                const newDuration = newContentWidth / 30; // match the slower speed
+                const newDuration = newContentWidth / 60; // match the slower speed
                 
                 gsap.killTweensOf('.ticker-content');
                 gsap.set('.ticker-content', { x: 0 });
                 gsap.to('.ticker-content', {
                     x: -newContentWidth,
                     repeat: -1,
-                    repeatDelay: 0.5,
+                    repeatDelay: 1,
                     duration: newDuration,
                     ease: 'linear'
                 });

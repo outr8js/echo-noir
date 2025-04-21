@@ -21,7 +21,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="contact-card">
-                    <form action="{{ url_for('submit_contact') }}" method="POST" class="contact-form">
+                    <form id="contactForm" class="contact-form">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-floating mb-3">
@@ -39,7 +39,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-floating mb-3">
-                                    <select class="form-select" id="inquiry" name="inquiry">
+                                    <select class="form-select" id="inquiry" name="inquiry" required>
                                         <option selected value="general">General Inquiry</option>
                                         <option value="sales">Sales Question</option>
                                         <option value="support">Technical Support</option>
@@ -57,10 +57,20 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Hidden fields for FormSubmit -->
+                        <input type="hidden" name="_formsubmit_id" value="">
+                        <input type="hidden" name="_replyto" value="info@echonoir.site">
+
                         <div class="row">
                             <div class="col-md-12">
-                                <button type="submit" class="btn btn-primary contact-btn">Send Message</button>
+                                <button type="submit" class="btn btn-primary contact-btn custom-submit-btn">Send Message</button>
                             </div>
+                        </div>
+
+                        <!-- Success Message -->
+                        <div id="successMessage" class="alert alert-success mt-3 d-none">
+                            ✅ Message sent! We'll be in touch shortly.
                         </div>
                     </form>
                 </div>
@@ -79,7 +89,7 @@
                         <i class="fas fa-envelope"></i>
                     </div>
                     <h3>Email Us</h3>
-                    <p><a href="mailto:hello@echonoir.com">hello@echonoir.com</a></p>
+                    <p><a href="mailto:info@echonoir.site">info@echonoir.site</a></p>
                 </div>
             </div>
             <div class="col-md-4">
@@ -88,18 +98,10 @@
                         <i class="fas fa-phone-alt"></i>
                     </div>
                     <h3>Call Us</h3>
-                    <p><a href="tel:+18005551234">1-800-555-1234</a></p>
+                    <p><a href="tel:+14244441620">1-424-444-1620</a></p>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="contact-info-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-comments"></i>
-                    </div>
-                    <h3>Live Chat</h3>
-                    <p>Available Monday-Friday<br>9am-5pm EST</p>
-                </div>
-            </div>
+            
         </div>
     </div>
 </section>
@@ -113,4 +115,53 @@
         </div>
     </div>
 </section>
+
+<!-- Custom Form Submission Script -->
+<script>
+document.getElementById("contactForm").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const data = new FormData(form);
+ const endpoint = "https://formsubmit.co/ajax/robert.briana@outlook.com"
+
+  data.append("_formsubmit_id", "");
+  data.append("_replyto", "info@echonoir.site");
+
+  try {
+    const res = await fetch(endpoint, {
+      method: "POST",
+      body: data
+    });
+
+    if (res.ok) {
+      form.reset();
+      form.classList.remove('was-validated');
+      const msg = document.getElementById("successMessage");
+msg.classList.remove("d-none");
+setTimeout(() => {
+  msg.classList.add("d-none");
+}, 2000);
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
+  } catch (err) {
+    console.error("Submission error:", err);
+    alert("There was a problem sending your message.");
+  }
+});
+</script>
+
+<!-- Button Hover Style -->
+<style>
+.custom-submit-btn {
+    background-color: #FF4E2E;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.custom-submit-btn:hover {
+    background-color: #E73D20;
+}
+</style>
 {% endblock %}

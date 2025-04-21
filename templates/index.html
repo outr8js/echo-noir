@@ -14,7 +14,13 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 hero-content">
-                <h1 class="hero-title"><span class="echo-text">Echo</span> <span class="noir-text">Noir</span></h1>
+                <h1 class="hero-title">
+                    <span class="echo-text">
+                      Echo
+                      <img src="{{ url_for('static', filename='svg/logo.svg') }}" alt="Echo Symbol" class="echo-inline-icon" />
+                    </span>
+                    <span class="noir-text">Noir</span>
+                  </h1>
                 <p class="hero-subtitle">The Echo That Answers, So You Don't Have To.</p>
                 <a href="{{ url_for('contact') }}" class="btn btn-primary cta-btn">Try Free for 14 Days</a>
             </div>

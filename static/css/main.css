@@ -2,7 +2,22 @@
 * Echo Noir - Main Stylesheet
 * Modern, minimalistic styling for AI-powered answering service
 */
-
+@font-face {
+    font-family: 'LoosExtended';
+    src: url('/static/fonts/LoosExtended_Medium.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'LoosExtended';
+    src: url('/static/fonts/LoosExtended_Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  
 :root {
     /* Color Variables */
     --near-black: #0B0B0B;
@@ -19,7 +34,6 @@
     --accent-gold: #FFB347;
     
     /* Font Variables */
-    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
     /* Spacing Variables */
     --space-xs: 0.25rem;  /* 4px */
@@ -73,7 +87,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin-bottom: var(--space-lg);
 }
 
@@ -112,7 +126,7 @@ p {
 }
 
 .logo {
-    height: 30px;
+    height: 40px;
     margin-right: var(--space-sm);
 }
 
@@ -122,7 +136,7 @@ p {
 }
 
 .echo {
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .noir {
@@ -336,21 +350,36 @@ p {
     text-shadow: 0 4px 30px rgba(0,0,0,0.2);
     letter-spacing: -0.5px;
     text-align: left;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 .echo-text {
-    font-weight: 500;
-    font-family: 'Inter', sans-serif;
+    font-family: 'LoosExtended', sans-serif;
+    font-weight: 400; /* Medium */
     letter-spacing: 0.5px;
     margin-right: 0.15em;
-}
-
-.noir-text {
-    font-weight: 300;
-    font-family: 'Inter', sans-serif;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .echo-inline-icon {
+    height: 1em;
+    margin-left: 0.3rem;
+    vertical-align: middle;
+    position: relative;
+    top: 0.05em; /* adjust as needed for perfect alignment */
+    filter: drop-shadow(0 0 1px rgba(255, 78, 46, 0.5));
+    opacity: 0.95;
+  }
+  
+  .noir-text {
+    font-family: 'LoosExtended', sans-serif;
+    font-weight: 300; /* Light */
     letter-spacing: 0.5px;
-}
+    color: black;
+    text-shadow: 0 0 4px rgba(255, 78, 46, 0.2); /* subtle orange glow */
+  }
+
 
 .hero-subtitle {
     font-size: clamp(1.5rem, 5vw, 2.8rem);
@@ -474,15 +503,15 @@ p {
 
 .ticker-content span {
     padding: 0 var(--space-lg);
-    font-weight: 600;
-    font-size: 1.25rem;
+    font-weight: 300;
+    font-size: 4rem;
     color: var(--white);
     letter-spacing: 0.5px;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .ticker-content .bonus-benefit {
-    font-weight: 700;
+    font-weight: 400;
     color: var(--white);
     text-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
@@ -843,8 +872,8 @@ p {
 }
 
 .step-number {
-    position: absolute;
-    top: -20px;
+    position: relative;
+    top: 0px;
     left: 50%;
     transform: translateX(-50%);
     width: 50px;
